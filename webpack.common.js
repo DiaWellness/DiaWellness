@@ -15,13 +15,12 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-        loader: 'babel-loader',
-        options: {
+          loader: 'babel-loader',
+          options: {
             presets: ['@babel/preset-env'],
-            sourceType: 'unambiguous', // <-- tambahkan ini
+            // Hapus sourceType di sini
+          },
         },
-        },
-
       },
       {
         test: /\.css$/i,
@@ -40,3 +39,4 @@ module.exports = {
     }),
   ],
 };
+
